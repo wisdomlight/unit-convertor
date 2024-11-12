@@ -18,11 +18,11 @@
 
 
 
-let inputBoxEl = document.getElementById("input-box")
-let convertBtnEl = document.querySelector("button[type='submit']")
-let lengthEl = document.getElementById("length-el")
-let volumeEl = document.getElementById("volume-el")
-let massEll = document.getElementById("mass-el")
+const inputBoxEl = document.getElementById("input-box")
+const convertBtnEl = document.querySelector("button[type='submit']")
+const lengthEl = document.getElementById("length-el")
+const volumeEl = document.getElementById("volume-el")
+const massEll = document.getElementById("mass-el")
 
 convertBtnEl.addEventListener("click", function(){
     let inputValue = inputBoxEl.value
@@ -32,14 +32,9 @@ convertBtnEl.addEventListener("click", function(){
     let gallonsToLiters = (inputValue / 0.264).toFixed(3)
     let kilosToPounds = (inputValue * 2.204).toFixed(3)
     let poundsToKilos = (inputValue / 2.204).toFixed(3)
-    // meterToFeet = meterToFeet.toFixed(3)
-    // feetToMeter = feetToMeter.toFixed(3)
-    // litersToGallons = litersToGallons.toFixed(3)
-    // gallonsToLiters = gallonsToLiters.toFixed(3)
-    // kilosToPounds = kilosToPounds.toFixed(3)
-    // poundsToKilos = poundsToKilos.toFixed(3)
 
     lengthEl.innerHTML = `<p>${inputValue} meters = ${meterToFeet} feet | ${inputValue} feet = ${feetToMeter}</p>`
     volumeEl.innerHTML = `<p>${inputValue} liters = ${litersToGallons} gallons | ${inputValue} gallons = ${gallonsToLiters} liters</p>`
     massEll.innerHTML =  `<p>${inputValue} kilos = ${kilosToPounds} pounds | ${inputValue} pounds = ${poundsToKilos} kilos</p>`
 })
+console.log("mission complete")
